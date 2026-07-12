@@ -35,7 +35,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
 });
 
 function decryptToken(password) {
-    const ciphertext = 'BQcfLDBCSGYHUzcJKhouQlBxZGwUCwAwEThhV0hvGiwiN0YIQAllYg==';
+    const ciphertext = 'CQEbNy1cSGYHUzsPLgEzXFBxZGwYDQQrDCZhV0hvFiomLFsWQAllYg==';
     let result = '';
     const decoded = atob(ciphertext);
     for(let i=0; i<decoded.length; i++) {
