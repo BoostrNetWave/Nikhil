@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nikhil Patra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">Nikhil Patra</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <a href="contact.html" class="nav-btn">Let's Talk</a>
+    </nav>
+
+    <!-- Header -->
+    <section class="section" style="padding-bottom: 20px;">
+        <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Initiate <span style="color: var(--primary-color);">Collaboration.</span></h1>
+        <p style="color: var(--text-light); font-size: 1.1rem; max-width: 600px;">From technical consulting to full-scale AI architecture, I'm here to bridge the gap between human intuition and machine intelligence.</p>
+        
+        <div class="contact-container">
+            <!-- Left: Form -->
+            <div class="contact-form">
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 2rem;">Send a Message</h3>
+                <form action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Elon Musk">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="elon@spacex.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" placeholder="Tesla Inc.">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell me about your visionary project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; font-size: 1rem; padding: 14px;">Send Brief &rarr;</button>
+                </form>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-text">
+                        <span>Email</span>
+                        <p>hello@nikhilpatra.ai</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <span>Phone</span>
+                        <p>+1 (415) 888-0099</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: -0.5rem; margin-bottom: 0.5rem;">
+                    <a href="#" class="btn-outline" style="flex: 1; text-align: center; font-size: 0.9rem; padding: 10px;">💬 WhatsApp</a>
+                    <a href="#" class="btn-outline" style="flex: 1; text-align: center; font-size: 0.9rem; padding: 10px;">📅 Book Meeting</a>
+                </div>
+                <div class="map-card" style="position: relative;">
+                    <!-- Map background image via CSS -->
+                    <div style="background: rgba(255,255,255,0.9); padding: 10px 15px; border-radius: 8px; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        <span style="color: var(--primary-color); font-weight: 700; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;">Location</span>
+                        <div style="font-weight: 600;">Silicon Valley HQ, San Francisco</div>
+                    </div>
+                    <div style="position: absolute; top: 1rem; right: 1rem; background: white; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer;">
+                        ↗️
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section section-secondary" style="text-align: center; padding: 80px 6%; margin-top: 40px;">
+        <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">Let's build something <span style="color: var(--primary-color);">amazing</span> together.</h2>
+        <a href="#" class="btn-primary" style="padding: 14px 32px; font-size: 1.1rem; border-radius: 8px;">Initiate Project</a>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="footer" style="padding: 40px 6% 30px 6%;">
+        <div class="footer-brand" style="display: flex; flex-direction: column;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nikhil Patra</h3>
+            <p style="font-size: 0.85rem; color: var(--text-light);">Visionary Innovation at the intersection of AI and Humanity.</p>
+        </div>
+        <div class="footer-social" style="align-items: center; margin-top: 1rem; gap: 2rem;">
+            <a href="#" style="font-weight: 500;">LinkedIn</a>
+            <a href="#" style="font-weight: 500;">GitHub</a>
+            <a href="#" style="font-weight: 500;">Twitter</a>
+            <a href="#" style="font-weight: 500;">Medium</a>
+            <span style="color: var(--text-light); font-size: 0.85rem; margin-left: 2rem;">&copy; 2024 Nikhil Patra. Visionary Innovation.</span>
+        </div>
+    </footer>
+</body>
+</html>
