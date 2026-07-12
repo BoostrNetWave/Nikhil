@@ -7,117 +7,37 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
-<body>
+<body data-page="home">
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-brand" data-content="global.brandName">Nikhil Patra</div>
-        <div class="nav-links">
-            <a href="index.html" class="active" data-content="global.navHome">Home</a>
-            <a href="products.html" data-content="global.navProducts">Products</a>
-            <a href="contact.html" data-content="global.navContact">Contact</a>
+        <div class="nav-brand" data-global="siteName">Nikhil Patra</div>
+        <div class="nav-links" id="nav-links">
+            <!-- Injected by app.js -->
         </div>
-        <a href="contact.html" class="nav-btn" data-content="global.navCta">Let's Talk</a>
+        <a href="#" class="nav-btn" id="nav-cta">Let's Talk</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero fade-in-up">
-        <div class="hero-content">
-            <div class="status-badge">
-                <span class="status-dot"></span> <span data-content="home.heroStatus">AVAILABLE FOR CONSULTING</span>
-            </div>
-            <h1 data-content="home.heroTitle">Nikhil Patra</h1>
-            <h2 data-content="home.heroSubtitle">Founder & CEO | AI & SaaS Entrepreneur</h2>
-            <p data-content="home.heroDesc">Pioneering the next era of intelligent software.</p>
-            <div class="hero-btns">
-                <a href="products.html" class="btn-primary" data-content="home.heroBtn1">Explore Products</a>
-                <a href="contact.html" class="btn-outline" data-content="home.heroBtn2">Contact Me</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="" alt="Portrait" data-content="home.heroImage">
-        </div>
-    </section>
-
-    <!-- Architect Section -->
-    <section class="section section-secondary fade-in-up">
-        <div class="architect-grid">
-            <div class="architect-text">
-                <h3 data-content="home.architectEyebrow">THE VISION</h3>
-                <h2 data-content="home.architectTitle">Architect of Digital Futures</h2>
-                <p data-content="home.architectDesc">As the founder...</p>
-            </div>
-            <div class="grid-2" id="architect-services-container">
-                <!-- Injected by app.js -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="section fade-in-up">
-        <h2 class="section-title"><span data-content="home.timelineTitle">Innovation Timeline</span></h2>
-        <p class="section-subtitle" data-content="home.timelineDesc">Milestones in the pursuit of technical excellence</p>
-        
-        <div class="timeline" id="timeline-container">
-            <!-- Injected by app.js -->
-        </div>
-    </section>
-
-    <!-- Ecosystem Section -->
-    <section class="section section-secondary fade-in-up">
-        <h2 class="section-title"><span data-content="home.ecosystemTitle">Ecosystem</span></h2>
-        <p class="section-subtitle" data-content="home.ecosystemDesc" style="margin-bottom: 2rem;">The pillars that support our innovations</p>
-        
-        <div class="grid-2" id="ecosystem-container">
-            <!-- Injected by app.js -->
-        </div>
-    </section>
-
-    <!-- Expertise Section -->
-    <section class="section fade-in-up">
-        <h2 class="section-title"><span data-content="home.expertiseTitle">Expertise</span></h2>
-        <p class="section-subtitle" data-content="home.expertiseDesc">End-to-end technical solutions</p>
-        
-        <div class="grid-4" id="expertise-container">
-            <!-- Injected by app.js -->
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="section section-secondary fade-in-up">
-        <h2 class="section-title"><span data-content="home.techStackTitle">Tech Stack</span></h2>
-        <div class="tech-grid" id="tech-stack-container">
-            <!-- Injected by app.js -->
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section fade-in-up" style="display:flex; justify-content:center;">
-        <div class="glass-card" style="text-align:center; max-width:800px; width:100%; border-color:var(--primary-color);">
-            <h2 data-content="home.ctaTitle" style="font-size: 2.5rem; font-weight:700; margin-bottom:1rem;">Ready to Build?</h2>
-            <p data-content="home.ctaDesc" style="color:var(--text-light); margin-bottom:2rem;">Let's discuss how AI can unlock your growth.</p>
-            <a href="contact.html" class="btn-primary" data-content="home.ctaBtn">Start a Conversation &rarr;</a>
-        </div>
-    </section>
+    <!-- Page Content (Rendered dynamically by CMS) -->
+    <main id="page-builder-content" style="min-height: 80vh;">
+        <div style="padding: 100px; text-align: center; color: var(--text-light);">Loading page content...</div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer fade-in-up">
         <div>
-            <h3 data-content="global.brandName" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nikhil Patra</h3>
-            <p data-content="global.footerDesc" style="font-size: 0.9rem; color: var(--text-light);">Visionary Innovation.</p>
+            <h3 data-global="siteName" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nikhil Patra</h3>
+            <p data-global="footerDesc" style="font-size: 0.9rem; color: var(--text-light);">Visionary Innovation.</p>
         </div>
         <div class="footer-links">
             <div class="link-group">
                 <h4>Navigation</h4>
-                <a href="index.html" data-content="global.navHome">Home</a>
-                <a href="products.html" data-content="global.navProducts">Products</a>
-            </div>
-            <div class="link-group">
-                <h4>Contact</h4>
-                <a href="contact.html" data-content="global.navContact">Contact</a>
+                <div id="footer-nav-links" style="display:flex; flex-direction:column;">
+                    <!-- Injected by app.js -->
+                </div>
             </div>
         </div>
     </footer>
-    <div class="footer-bottom fade-in-up" data-content="global.footerCopyright">
+    <div class="footer-bottom fade-in-up" data-global="footerCopyright">
         &copy; 2024 Nikhil Patra
     </div>
 </body>

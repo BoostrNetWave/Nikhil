@@ -3,83 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | Nikhil Patra</title>
+    <title>Boostr CMS</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .admin-container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 2rem;
-            background: var(--bg-color);
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #f8f9fa; font-family: var(--font-main); }
+        
+        /* Login Screen */
+        #login-screen {
+            display: flex; align-items: center; justify-content: center; height: 100vh;
         }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        .login-box {
+            background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); width: 400px; text-align: center;
         }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            margin-bottom: 1.5rem;
+
+        /* Dashboard Layout */
+        #dashboard { display: none; height: 100vh; display: flex; } /* Will be switched to flex in JS */
+        
+        /* Sidebar */
+        .sidebar {
+            width: 250px; background: white; border-right: 1px solid var(--border-color); display: flex; flex-direction: column;
         }
-        #dashboard { display: none; }
-        .success-msg {
-            color: #16a34a;
-            background: #f0fdf4;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            display: none;
-            border: 1px solid #bbf7d0;
+        .sidebar-header { padding: 20px; border-bottom: 1px solid var(--border-color); font-weight: 700; font-size: 1.2rem; }
+        .sidebar-nav { flex: 1; padding: 20px 0; overflow-y: auto; }
+        .nav-item {
+            padding: 12px 20px; display: block; color: var(--text-dark); cursor: pointer; font-weight: 500; font-size: 0.95rem;
+            transition: 0.2s;
         }
-        .error-msg {
-            color: #dc2626;
-            background: #fef2f2;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            display: none;
-            border: 1px solid #fecaca;
+        .nav-item:hover, .nav-item.active { background: rgba(45, 49, 250, 0.05); color: var(--primary-color); border-right: 3px solid var(--primary-color); }
+        .sidebar-footer { padding: 20px; border-top: 1px solid var(--border-color); }
+        
+        /* Main Workspace */
+        .workspace { flex: 1; display: flex; flex-direction: column; }
+        
+        /* Topbar */
+        .topbar {
+            height: 60px; background: white; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; padding: 0 20px;
         }
+        .topbar-actions { display: flex; gap: 10px; align-items: center; }
+        
+        /* Split View */
+        .split-view { flex: 1; display: flex; overflow: hidden; }
+        
+        /* Editor Panel */
+        .editor-panel {
+            width: 50%; padding: 20px; overflow-y: auto; border-right: 1px solid var(--border-color); background: #fafafa;
+        }
+        
+        /* Preview Panel */
+        .preview-panel {
+            width: 50%; background: #e5e5e5; display: flex; flex-direction: column;
+        }
+        .preview-header { padding: 10px; background: white; border-bottom: 1px solid #ccc; display: flex; justify-content: center; gap: 10px; }
+        .preview-frame { flex: 1; width: 100%; border: none; background: white; }
+
+        /* Generic Forms inside Editor */
+        .section-block {
+            background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            position: relative;
+        }
+        .section-header { display: flex; justify-content: space-between; align-items: center; cursor: move; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .section-title { font-weight: 600; font-size: 1.05rem; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 0.85rem; color: var(--text-light); margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 0.95rem;
+        }
+        
+        .array-item { border: 1px dashed #ccc; padding: 10px; border-radius: 8px; margin-bottom: 10px; position: relative; background: #fafafa; }
+        .btn-remove { position: absolute; top: 10px; right: 10px; background: #fee2e2; color: #dc2626; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+        
+        /* Media Library */
+        .media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px; }
+        .media-item { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: white; position: relative; cursor: pointer; }
+        .media-item img { width: 100%; height: 100px; object-fit: cover; }
+        .media-item .copy-btn { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; border: none; padding: 5px; font-size: 0.75rem; cursor: pointer; }
+        .upload-box { border: 2px dashed #ccc; border-radius: 12px; padding: 40px; text-align: center; cursor: pointer; margin-bottom: 20px; background: white; }
+        .upload-box:hover { border-color: var(--primary-color); background: #f0f4ff; }
+
+        .status-msg { font-size: 0.85rem; font-weight: 500; }
+        .success { color: #16a34a; }
+        .error { color: #dc2626; }
     </style>
 </head>
-<body style="background: var(--bg-secondary);">
+<body>
 
-    <div class="admin-container" id="login-screen">
-        <h2 style="margin-bottom: 0.5rem; text-align: center;">Admin Login</h2>
-        <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Use your GitHub Personal Access Token as the password.</p>
+    <!-- LOGIN -->
+    <div id="login-screen">
+        <div class="login-box">
+            <h2 style="margin-bottom: 10px;">Boostr CMS</h2>
+            <p style="color: var(--text-light); margin-bottom: 30px; font-size: 0.9rem;">Serverless Admin Panel</p>
+            <div id="login-error" class="status-msg error" style="display:none; margin-bottom: 15px;">Invalid Token.</div>
+            <div class="form-group">
+                <input type="password" id="token" placeholder="GitHub Personal Access Token" style="padding: 14px;">
+            </div>
+            <button class="btn-primary" style="width: 100%; padding: 14px;" id="login-btn">Login &rarr;</button>
+        </div>
+    </div>
+
+    <!-- DASHBOARD (Hidden initially) -->
+    <div id="dashboard" style="display: none;">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">Boostr CMS</div>
+            <div class="sidebar-nav">
+                <div class="nav-item active" data-view="page-home">🏠 Home Page</div>
+                <div class="nav-item" data-view="page-products">📦 Products Page</div>
+                <div class="nav-item" data-view="page-contact">✉️ Contact Page</div>
+                <div style="height: 1px; background: #eee; margin: 15px 0;"></div>
+                <div class="nav-item" data-view="navigation">🧭 Navigation Menu</div>
+                <div class="nav-item" data-view="media">🖼️ Media Library</div>
+                <div class="nav-item" data-view="seo">🔍 SEO & Settings</div>
+            </div>
+            <div class="sidebar-footer">
+                <button class="btn-outline" style="width:100%; padding: 8px;" id="logout-btn">Logout</button>
+            </div>
+        </div>
         
-        <div class="error-msg" id="login-error">Authentication failed. Check your token.</div>
-
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text" id="username" value="admin" disabled style="background: #eee; cursor: not-allowed;">
+        <!-- Workspace -->
+        <div class="workspace">
+            <div class="topbar">
+                <div style="font-weight: 600; color: var(--text-light);" id="current-view-title">Editing: Home Page</div>
+                <div class="topbar-actions">
+                    <span id="save-status" class="status-msg"></span>
+                    <button class="btn-primary" style="padding: 8px 24px;" id="publish-btn">Publish to Live Site</button>
+                </div>
+            </div>
+            
+            <div class="split-view">
+                <!-- Left: Editor Panel -->
+                <div class="editor-panel" id="editor-panel">
+                    <!-- Dynamically populated by JS -->
+                </div>
+                
+                <!-- Right: Live Preview -->
+                <div class="preview-panel">
+                    <div class="preview-header">
+                        <button class="btn-outline" style="padding: 4px 12px; font-size:0.8rem;" onclick="setPreviewUrl('index.html')">Home</button>
+                        <button class="btn-outline" style="padding: 4px 12px; font-size:0.8rem;" onclick="setPreviewUrl('products.html')">Products</button>
+                        <button class="btn-outline" style="padding: 4px 12px; font-size:0.8rem;" onclick="setPreviewUrl('contact.html')">Contact</button>
+                    </div>
+                    <iframe src="index.html" id="preview-frame" class="preview-frame"></iframe>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label>Password (GitHub Token)</label>
-            <input type="password" id="token" placeholder="ghp_...">
-        </div>
-        <button class="btn-primary" style="width: 100%;" id="login-btn">Login &rarr;</button>
     </div>
 
-    <div class="admin-container" id="dashboard">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-            <h2>Content Manager</h2>
-            <button class="btn-outline" style="padding: 6px 16px;" id="logout-btn">Logout</button>
-        </div>
-
-        <div class="success-msg" id="save-success">Changes saved successfully! It may take ~60 seconds to reflect on the live site.</div>
-        <div class="error-msg" id="save-error">Error saving changes.</div>
-
-        <div id="fields-container">
-            <!-- Fields generated dynamically by JS -->
-        </div>
-
-        <button class="btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem; margin-top: 1rem;" id="save-btn">Save Changes</button>
-    </div>
-
+    <!-- Drag and Drop Sortable library (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="admin.js"></script>
 </body>
 </html>
