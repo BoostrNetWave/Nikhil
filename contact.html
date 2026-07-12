@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Nikhil Patra</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -62,14 +63,14 @@
                     <div class="info-icon">✉️</div>
                     <div class="info-text">
                         <span>Email</span>
-                        <p>hello@nikhilpatra.ai</p>
+                        <p data-content="contactEmail">hello@nikhilpatra.ai</p>
                     </div>
                 </div>
                 <div class="info-card">
                     <div class="info-icon">📞</div>
                     <div class="info-text">
                         <span>Phone</span>
-                        <p>+1 (415) 888-0099</p>
+                        <p data-content="contactPhone">+1 (415) 888-0099</p>
                     </div>
                 </div>
                 <div style="display: flex; gap: 1rem; margin-top: -0.5rem; margin-bottom: 0.5rem;">
@@ -80,7 +81,7 @@
                     <!-- Map background image via CSS -->
                     <div style="background: rgba(255,255,255,0.9); padding: 10px 15px; border-radius: 8px; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                         <span style="color: var(--primary-color); font-weight: 700; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;">Location</span>
-                        <div style="font-weight: 600;">Silicon Valley HQ, San Francisco</div>
+                        <div style="font-weight: 600;" data-content="contactLocation">Silicon Valley HQ, San Francisco</div>
                     </div>
                     <div style="position: absolute; top: 1rem; right: 1rem; background: white; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer;">
                         ↗️

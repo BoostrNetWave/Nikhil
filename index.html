@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikhil Patra | Architect of Digital Futures</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -24,9 +25,9 @@
             <div class="status-badge">
                 <span class="status-dot"></span> AVAILABLE FOR CONSULTING
             </div>
-            <h1>Nikhil Patra</h1>
-            <h2>Founder & CEO | AI & SaaS Entrepreneur | Software Engineer</h2>
-            <p>Pioneering the next era of intelligent software. I build scalable AI ecosystems and SaaS platforms that transform how modern businesses operate.</p>
+            <h1 data-content="heroTitle">Nikhil Patra</h1>
+            <h2 data-content="heroSubtitle">Founder & CEO | AI & SaaS Entrepreneur | Software Engineer</h2>
+            <p data-content="heroDesc">Pioneering the next era of intelligent software. I build scalable AI ecosystems and SaaS platforms that transform how modern businesses operate.</p>
             <div class="hero-btns">
                 <a href="products.html" class="btn-primary">Explore Products</a>
                 <a href="contact.html" class="btn-outline">Contact Me</a>
@@ -34,7 +35,7 @@
         </div>
         <div class="hero-image">
             <!-- Using a placeholder matching the grayscale aesthetic -->
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800" alt="Nikhil Patra Portrait">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800" alt="Nikhil Patra Portrait" data-content="heroImage">
         </div>
     </section>
 
@@ -43,8 +44,8 @@
         <div class="architect-grid">
             <div class="architect-text">
                 <h3>THE VISION</h3>
-                <h2>Architect of Digital Futures</h2>
-                <p>As the founder of Labix Solutions Pvt. Ltd. and Boostr Netwave Solutions Pvt. Ltd., I'm dedicating my career to bridging the gap between human intuition & machine intelligence and real-world business value.</p>
+                <h2 data-content="architectTitle">Architect of Digital Futures</h2>
+                <p data-content="architectDesc">As the founder of Labix Solutions Pvt. Ltd. and Boostr Netwave Solutions Pvt. Ltd., I'm dedicating my career to bridging the gap between human intuition & machine intelligence and real-world business value.</p>
             </div>
             <div class="architect-cards">
                 <div class="service-card">
@@ -249,7 +250,7 @@
         </div>
     </footer>
     <div class="footer-bottom">
-        &copy; 2024 Nikhil Patra. Visionary Innovation. | Privacy Policy | Terms of Service
+        &copy; 2024 Nikhil Patra. <span data-content="footerDesc">Visionary Innovation at the intersection of AI and Humanity.</span> | Privacy Policy | Terms of Service
     </div>
 </body>
 </html>

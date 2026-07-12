@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Nikhil Patra</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 2rem;
+            background: var(--bg-color);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        #dashboard { display: none; }
+        .success-msg {
+            color: #16a34a;
+            background: #f0fdf4;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+            border: 1px solid #bbf7d0;
+        }
+        .error-msg {
+            color: #dc2626;
+            background: #fef2f2;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+            border: 1px solid #fecaca;
+        }
+    </style>
+</head>
+<body style="background: var(--bg-secondary);">
+
+    <div class="admin-container" id="login-screen">
+        <h2 style="margin-bottom: 0.5rem; text-align: center;">Admin Login</h2>
+        <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Use your GitHub Personal Access Token as the password.</p>
+        
+        <div class="error-msg" id="login-error">Authentication failed. Check your token.</div>
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" value="admin" disabled style="background: #eee; cursor: not-allowed;">
+        </div>
+        <div class="form-group">
+            <label>Password (GitHub Token)</label>
+            <input type="password" id="token" placeholder="ghp_...">
+        </div>
+        <button class="btn-primary" style="width: 100%;" id="login-btn">Login &rarr;</button>
+    </div>
+
+    <div class="admin-container" id="dashboard">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h2>Content Manager</h2>
+            <button class="btn-outline" style="padding: 6px 16px;" id="logout-btn">Logout</button>
+        </div>
+
+        <div class="success-msg" id="save-success">Changes saved successfully! It may take ~60 seconds to reflect on the live site.</div>
+        <div class="error-msg" id="save-error">Error saving changes.</div>
+
+        <div id="fields-container">
+            <!-- Fields generated dynamically by JS -->
+        </div>
+
+        <button class="btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem; margin-top: 1rem;" id="save-btn">Save Changes</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
