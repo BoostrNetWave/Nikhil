@@ -1,12 +1,148 @@
 {
-  "heroTitle": "Nikhil Patra",
-  "heroSubtitle": "Founder & CEO | AI & SaaS Entrepreneur | Software Engineer",
-  "heroDesc": "Pioneering the next era of intelligent software. I build scalable AI ecosystems and SaaS platforms that transform how modern businesses operate.",
-  "heroImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800",
-  "architectTitle": "Architect of Digital Futures",
-  "architectDesc": "As the founder of Labix Solutions Pvt. Ltd. and Boostr Netwave Solutions Pvt. Ltd., I'm dedicating my career to bridging the gap between human intuition & machine intelligence and real-world business value.",
-  "contactEmail": "hello@nikhilpatra.ai",
-  "contactPhone": "+1 (415) 888-0099",
-  "contactLocation": "Silicon Valley HQ, San Francisco",
-  "footerDesc": "Visionary Innovation at the intersection of AI and Humanity."
+  "global": {
+    "brandName": "Nikhil Patra",
+    "navHome": "Home",
+    "navProducts": "Products",
+    "navContact": "Contact",
+    "navCta": "Let's Talk",
+    "footerDesc": "Visionary Innovation at the intersection of AI and Humanity.",
+    "footerCopyright": "© 2024 Nikhil Patra. Visionary Innovation. | Privacy Policy | Terms of Service",
+    "footerSocial": [
+      {"name": "LinkedIn", "url": "#"},
+      {"name": "GitHub", "url": "#"},
+      {"name": "Twitter", "url": "#"},
+      {"name": "Medium", "url": "#"}
+    ]
+  },
+  "home": {
+    "heroStatus": "AVAILABLE FOR CONSULTING",
+    "heroTitle": "Nikhil Patra",
+    "heroSubtitle": "Founder & CEO | AI & SaaS Entrepreneur | Software Engineer",
+    "heroDesc": "Pioneering the next era of intelligent software. I build scalable AI ecosystems and SaaS platforms that transform how modern businesses operate.",
+    "heroImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800",
+    "heroBtn1": "Explore Products",
+    "heroBtn2": "Contact Me",
+    
+    "architectEyebrow": "THE VISION",
+    "architectTitle": "Architect of Digital Futures",
+    "architectDesc": "As the founder of Labix Solutions Pvt. Ltd. and Boostr Netwave Solutions Pvt. Ltd., I'm dedicating my career to bridging the gap between human intuition & machine intelligence and real-world business value.",
+    "architectServices": [
+      {"icon": "🧠", "title": "AI Systems", "desc": "Architecting intelligent neural logic for enterprise."},
+      {"icon": "☁️", "title": "SaaS Architecture", "desc": "Building multi-tenant cloud ecosystems."},
+      {"icon": "💻", "title": "Custom Dev", "desc": "High performance web and mobile solutions."},
+      {"icon": "🚀", "title": "Startup Consulting", "desc": "Scaling ideas from MVP to global markets."}
+    ],
+    
+    "timelineTitle": "Innovation Timeline",
+    "timelineDesc": "Milestones in the pursuit of technical excellence",
+    "timelineItems": [
+      {"year": "2019", "title": "Boostr Netwave Founded", "desc": "Established the company for digital marketing and software services."},
+      {"year": "2021", "title": "AI Integration Era", "desc": "Shifted focus to large language models and predictive analytics for enterprise."},
+      {"year": "2023", "title": "Labix Solutions", "desc": "Launched specialized SaaS products method focusing on automation."},
+      {"year": "2024", "title": "Global Scaling", "desc": "Expanding software reach to 10+ countries with proprietary AI frameworks."}
+    ],
+
+    "ecosystemTitle": "Ecosystem",
+    "ecosystemDesc": "The pillars that support our innovations",
+    "ecosystemCards": [
+      {
+        "logoBg": "#2D31FA", "logoLetter": "L", "title": "Labix Solutions", "subtitle": "Software Studio",
+        "desc": "A next-generation product studio developing intelligent SaaS tools for global enterprises. We specialize in AI-driven automation and collaborative data ecosystems.",
+        "tags": ["Generative AI", "Micro-SaaS", "Enterprise Agile"],
+        "linkUrl": "#", "linkText": "Visit Website →"
+      },
+      {
+        "logoBg": "#333333", "logoLetter": "B", "title": "Boostr Netwave", "subtitle": "Digital Agency",
+        "desc": "Comprehensive software development and digital strategy firm. We engineer robust cloud infrastructures and high-converting digital marketing funnels.",
+        "tags": ["Cloud Infrastructure", "Growth Marketing", "Mobile App"],
+        "linkUrl": "#", "linkText": "Visit Website →"
+      }
+    ],
+
+    "expertiseTitle": "Expertise",
+    "expertiseDesc": "End-to-end technical solutions for the digital age",
+    "expertiseItems": [
+      {"icon": "🤖", "title": "AI Integration", "desc": "Custom LLM deployment and predictive analytics."},
+      {"icon": "☁️", "title": "SaaS MVP", "desc": "Scalable, responsive web applications."},
+      {"icon": "📱", "title": "Mobile Dev", "desc": "Native-feel cross-platform experiences."},
+      {"icon": "🌐", "title": "Cloud Solutions", "desc": "Serverless architecture and DevOps."},
+      {"icon": "📈", "title": "Growth Marketing", "desc": "Data-driven performance campaigns."},
+      {"icon": "🎨", "title": "Branding", "desc": "Visual identity systems for startups."},
+      {"icon": "🚀", "title": "Startup MVP", "desc": "Rapid prototyping and product validation."},
+      {"icon": "💼", "title": "Tech Consulting", "desc": "Fractional CTO and engineering leadership."}
+    ],
+
+    "techStackTitle": "Tech Stack",
+    "techStackItems": ["React", "Next.js", "Node.js", "Python", "Flutter", "Docker", "Supabase", "AWS", "OpenAI", "Gemini"],
+
+    "ctaTitle": "Ready to Build the Future?",
+    "ctaDesc": "Whether you have a startup idea or an enterprise problem, let's discuss how AI and modern software architecture can unlock your growth.",
+    "ctaBtn": "Start a Conversation →"
+  },
+  "products": {
+    "pageTitle": "The Ecosystem",
+    "pageDesc": "A collection of visionary tools and platforms designed to bridge the gap between human intuition and machine intelligence.",
+    "items": [
+      {
+        "badgeText": "Live", "badgeColor": "#ffffff", "badgeBg": "rgba(255,255,255,0.9)",
+        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400&h=300",
+        "icon": "☁️", "title": "CloudPi", "desc": "The decentralized computing layer for edge-AI orchestration.",
+        "features": ["Real-time edge processing", "Zero-latency peer sync"],
+        "tags": ["Rust", "Wasm", "Kubernetes"],
+        "btnText": "LEARN MORE"
+      },
+      {
+        "badgeText": "MVP", "badgeColor": "#be123c", "badgeBg": "#ffe4e6",
+        "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=400&h=300",
+        "icon": "🌱", "title": "TalentSprout", "desc": "AI-driven psychometric matching for high-stakes hiring.",
+        "features": ["Bias-neutral evaluation", "Cognitive profile mapping"],
+        "tags": ["Python", "PyTorch", "React"],
+        "btnText": "LEARN MORE"
+      },
+      {
+        "badgeText": "", "badgeColor": "", "badgeBg": "",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400&h=300",
+        "icon": "🛡️", "title": "Adethix", "desc": "The ethical guardrail for programmatic advertising platforms.",
+        "features": ["Fraud detection engine", "Transparent attribution"],
+        "tags": ["Go", "BigQuery", "Kafka"],
+        "btnText": "LEARN MORE"
+      },
+      {
+        "badgeText": "IN DEVELOPMENT", "badgeColor": "#1e3a8a", "badgeBg": "#dbeafe",
+        "image": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=400&h=300",
+        "icon": "⚖️", "title": "Vidhik AI", "desc": "Large Language Models specialized for Indian Constitutional Law.",
+        "features": ["Multi-lingual legal parsing", "Precedent analysis engine"],
+        "tags": ["LLaMA 3", "ElasticSearch", "Next.js"],
+        "btnText": "JOIN WAITLIST"
+      },
+      {
+        "badgeText": "", "badgeColor": "", "badgeBg": "",
+        "image": "https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=400&h=300",
+        "icon": "✨", "title": "MakeAuthority", "desc": "Autonomous content engine for establishing domain expertise.",
+        "features": ["Semantic topic discovery", "Automated syndication"],
+        "tags": ["OpenAI", "PostgreSQL", "Node.js"],
+        "btnText": "LEARN MORE"
+      }
+    ]
+  },
+  "contact": {
+    "headerEyebrow": "Initiate",
+    "headerTitle": "Collaboration.",
+    "headerDesc": "From technical consulting to full-scale AI architecture, I'm here to bridge the gap between human intuition and machine intelligence.",
+    "formTitle": "Send a Message",
+    "formBtn": "Send Brief →",
+    "emailLabel": "Email",
+    "emailValue": "hello@nikhilpatra.ai",
+    "phoneLabel": "Phone",
+    "phoneValue": "+1 (415) 888-0099",
+    "whatsappText": "💬 WhatsApp",
+    "whatsappLink": "#",
+    "meetingText": "📅 Book Meeting",
+    "meetingLink": "#",
+    "mapLocationLabel": "LOCATION",
+    "mapLocationText": "Silicon Valley HQ, San Francisco",
+    "mapImage": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&h=400",
+    "ctaTitle": "Let's build something amazing together.",
+    "ctaBtn": "Initiate Project"
+  }
 }

@@ -5,171 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | Nikhil Patra</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-brand">Nikhil Patra</div>
+        <div class="nav-brand" data-content="global.brandName">Nikhil Patra</div>
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" data-content="global.navHome">Home</a>
+            <a href="products.html" class="active" data-content="global.navProducts">Products</a>
+            <a href="contact.html" data-content="global.navContact">Contact</a>
         </div>
-        <a href="contact.html" class="nav-btn">Let's Talk</a>
+        <a href="contact.html" class="nav-btn" data-content="global.navCta">Let's Talk</a>
     </nav>
 
-    <div style="padding: 80px 6% 40px 6%; text-align: center;">
-        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">The <span style="color: var(--primary-color);">Ecosystem</span></h1>
-        <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">A collection of visionary tools and platforms designed to bridge the gap between human intuition and machine intelligence.</p>
-    </div>
+    <!-- Header -->
+    <section class="section fade-in-up" style="padding-bottom: 20px;">
+        <h1 class="section-title"><span data-content="products.pageTitle">The Ecosystem</span></h1>
+        <p class="section-subtitle" data-content="products.pageDesc">A collection of visionary tools and platforms designed to bridge the gap between human intuition and machine intelligence.</p>
+    </section>
 
-    <!-- Products Section -->
-    <section class="section" style="padding-top: 0;">
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-badge">Live</span>
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400&h=300" alt="CloudPi Server Racks">
-                </div>
-                <div class="product-content">
-                    <div class="product-header">
-                        <span class="product-icon">☁️</span>
-                        <h3>CloudPi</h3>
-                    </div>
-                    <p class="product-desc">The decentralized computing layer for edge-AI orchestration.</p>
-                    <ul class="feature-list">
-                        <li><i>✓</i> Real-time edge processing</li>
-                        <li><i>✓</i> Zero-latency peer sync</li>
-                    </ul>
-                    <div class="eco-tags" style="margin-bottom: 1.5rem;">
-                        <span>Rust</span>
-                        <span>Wasm</span>
-                        <span>Kubernetes</span>
-                    </div>
-                    <button class="btn-full">LEARN MORE</button>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-badge" style="background:#ffe4e6; color:#be123c;">MVP</span>
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=400&h=300" alt="TalentSprout AI">
-                </div>
-                <div class="product-content">
-                    <div class="product-header">
-                        <span class="product-icon">🌱</span>
-                        <h3>TalentSprout</h3>
-                    </div>
-                    <p class="product-desc">AI-driven psychometric matching for high-stakes hiring.</p>
-                    <ul class="feature-list">
-                        <li><i>✓</i> Bias-neutral evaluation</li>
-                        <li><i>✓</i> Cognitive profile mapping</li>
-                    </ul>
-                    <div class="eco-tags" style="margin-bottom: 1.5rem;">
-                        <span>Python</span>
-                        <span>PyTorch</span>
-                        <span>React</span>
-                    </div>
-                    <button class="btn-full">LEARN MORE</button>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400&h=300" alt="Adethix Shield">
-                </div>
-                <div class="product-content">
-                    <div class="product-header">
-                        <span class="product-icon">🛡️</span>
-                        <h3>Adethix</h3>
-                    </div>
-                    <p class="product-desc">The ethical guardrail for programmatic advertising platforms.</p>
-                    <ul class="feature-list">
-                        <li><i>✓</i> Fraud detection engine</li>
-                        <li><i>✓</i> Transparent attribution</li>
-                    </ul>
-                    <div class="eco-tags" style="margin-bottom: 1.5rem;">
-                        <span>Go</span>
-                        <span>BigQuery</span>
-                        <span>Kafka</span>
-                    </div>
-                    <button class="btn-full">LEARN MORE</button>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-badge">IN DEVELOPMENT</span>
-                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=400&h=300" alt="Vidhik AI Gavel">
-                </div>
-                <div class="product-content">
-                    <div class="product-header">
-                        <span class="product-icon">⚖️</span>
-                        <h3>Vidhik AI</h3>
-                    </div>
-                    <p class="product-desc">Large Language Models specialized for Indian Constitutional Law.</p>
-                    <ul class="feature-list">
-                        <li><i>✓</i> Multi-lingual legal parsing</li>
-                        <li><i>✓</i> Precedent analysis engine</li>
-                    </ul>
-                    <div class="eco-tags" style="margin-bottom: 1.5rem;">
-                        <span>LLaMA 3</span>
-                        <span>ElasticSearch</span>
-                        <span>Next.js</span>
-                    </div>
-                    <button class="btn-full">JOIN WAITLIST</button>
-                </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=400&h=300" alt="MakeAuthority Tech">
-                </div>
-                <div class="product-content">
-                    <div class="product-header">
-                        <span class="product-icon">✨</span>
-                        <h3>MakeAuthority</h3>
-                    </div>
-                    <p class="product-desc">Autonomous content engine for establishing domain expertise.</p>
-                    <ul class="feature-list">
-                        <li><i>✓</i> Semantic topic discovery</li>
-                        <li><i>✓</i> Automated syndication</li>
-                    </ul>
-                    <div class="eco-tags" style="margin-bottom: 1.5rem;">
-                        <span>OpenAI</span>
-                        <span>PostgreSQL</span>
-                        <span>Node.js</span>
-                    </div>
-                    <button class="btn-full">LEARN MORE</button>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card" style="border: 2px dashed var(--border-color); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem; text-align: center; box-shadow: none;">
-                <div style="width: 64px; height: 64px; background: #eaeaea; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #888; margin-bottom: 1.5rem;">+</div>
-                <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Next Venture</h3>
-                <p style="color: var(--text-light); font-size: 0.95rem;">Researching the next intersection of human and machine. Stay tuned.</p>
-            </div>
+    <!-- Products Grid -->
+    <section class="section section-secondary fade-in-up" style="padding-top: 60px;">
+        <div class="grid-3" id="products-container">
+            <!-- Injected by app.js -->
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" style="background: var(--bg-secondary); border-top: none; padding-top: 40px; margin-top: 40px;">
-        <div class="footer-brand" style="display: flex; flex-direction: column;">
-            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nikhil Patra</h3>
-            <p style="font-size: 0.85rem; color: var(--text-light);">&copy; 2024 Nikhil Patra. Visionary Innovation.</p>
+    <footer class="footer fade-in-up">
+        <div>
+            <h3 data-content="global.brandName" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nikhil Patra</h3>
+            <p data-content="global.footerDesc" style="font-size: 0.9rem; color: var(--text-light);">Visionary Innovation.</p>
         </div>
-        <div class="footer-social" style="align-items: center;">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-            <a href="#">Medium</a>
+        <div class="footer-links">
+            <div class="link-group">
+                <h4>Navigation</h4>
+                <a href="index.html" data-content="global.navHome">Home</a>
+                <a href="products.html" data-content="global.navProducts">Products</a>
+            </div>
+            <div class="link-group">
+                <h4>Contact</h4>
+                <a href="contact.html" data-content="global.navContact">Contact</a>
+            </div>
         </div>
     </footer>
+    <div class="footer-bottom fade-in-up" data-content="global.footerCopyright">
+        &copy; 2024 Nikhil Patra
+    </div>
 </body>
 </html>
