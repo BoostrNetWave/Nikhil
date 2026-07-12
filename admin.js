@@ -338,6 +338,23 @@ function openMediaModal(path) {
     activeImageInputPath = path;
     mediaModal.style.display = 'flex';
     modalSearch.value = '';
+    
+    // Modal Upload Box Logic
+    const modalDropZone = document.getElementById('modal-drop-zone');
+    const modalFileInput = document.getElementById('modal-file-input');
+    
+    if (modalDropZone && !modalDropZone.hasAttribute('data-initialized')) {
+        modalDropZone.ondragover = e => { e.preventDefault(); modalDropZone.classList.add('dragging'); };
+        modalDropZone.ondragleave = e => { e.preventDefault(); modalDropZone.classList.remove('dragging'); };
+        modalDropZone.ondrop = e => {
+            e.preventDefault(); modalDropZone.classList.remove('dragging');
+            if(e.dataTransfer.files.length) handleFileUpload(e.dataTransfer.files[0], 'modal');
+        };
+        modalDropZone.onclick = () => modalFileInput.click();
+        modalFileInput.onchange = e => { if(e.target.files.length) handleFileUpload(e.target.files[0], 'modal'); };
+        modalDropZone.setAttribute('data-initialized', 'true');
+    }
+
     fetchMedia(() => renderMediaGrid(modalGrid, mediaLibraryCache, true));
 }
 

@@ -173,6 +173,11 @@
                 <button class="close-modal" onclick="document.getElementById('media-modal').style.display='none'">&times;</button>
             </div>
             <div class="modal-body">
+                <div class="upload-box" id="modal-drop-zone" style="padding: 20px; margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 5px 0;">Upload New Image</h4>
+                    <p style="margin: 0; font-size: 0.8rem; color: #666;">Drag & drop or click to upload</p>
+                    <input type="file" id="modal-file-input" style="display:none;" accept="image/*">
+                </div>
                 <input type="text" class="search-bar" id="modal-search" placeholder="Search images...">
                 <div id="modal-upload-status" class="status-msg"></div>
                 <div class="media-grid" id="modal-media-grid"></div>
@@ -182,6 +187,6 @@
 
     <!-- Drag and Drop Sortable library (CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script src="admin.js?v=4"></script>
+    <script src="admin.js?v=5"></script>
 </body>
 </html>
