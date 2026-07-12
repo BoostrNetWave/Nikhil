@@ -4,37 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Nikhil Patra</title>
-    <link rel="stylesheet" href="style.css?v=3">
-    <script src="app.js?v=3"></script>
+    <link rel="stylesheet" href="style.css?v=4">
+    <script src="app.js?v=4"></script>
 </head>
 <body data-page="contact">
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-brand" data-global="siteName">Nikhil Patra</div>
-        <div class="nav-links" id="nav-links"></div>
-        <a href="#" class="nav-btn" id="nav-cta">Let's Talk</a>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><span data-global="siteName">Nikhil Patra</span><span>.</span></a>
+            <div class="nav-links" id="nav-menu">
+                <!-- Dynamic Nav -->
+            </div>
+            <a href="contact.html" class="btn-primary" data-global="ctaText" style="padding: 10px 20px;">Let's Talk</a>
+        </div>
     </nav>
 
     <!-- Page Content (Rendered dynamically by CMS) -->
-    <main id="page-builder-content" style="min-height: 80vh;">
-        <div style="padding: 100px; text-align: center; color: var(--text-light);">Loading page content...</div>
+    <main id="main-content" style="min-height: 80vh;">
+        <p style="padding: 150px; text-align: center; color: #475569;">Loading page content...</p>
     </main>
 
     <!-- Footer -->
-    <footer class="footer fade-in-up">
-        <div>
-            <h3 data-global="siteName" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nikhil Patra</h3>
-            <p data-global="footerDesc" style="font-size: 0.9rem; color: var(--text-light);">Visionary Innovation.</p>
-        </div>
-        <div class="footer-links">
-            <div class="link-group">
-                <h4>Navigation</h4>
-                <div id="footer-nav-links" style="display:flex; flex-direction:column;"></div>
-            </div>
-        </div>
+    <footer id="footer">
+        <!-- Injected by app.js -->
     </footer>
-    <div class="footer-bottom fade-in-up" data-global="footerCopyright">
-        &copy; 2024 Nikhil Patra
-    </div>
 </body>
 </html>
