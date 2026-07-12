@@ -106,9 +106,12 @@
         <div class="login-box">
             <h2 style="margin-bottom: 10px;">Boostr CMS</h2>
             <p style="color: var(--text-light); margin-bottom: 30px; font-size: 0.9rem;">Serverless Admin Panel</p>
-            <div id="login-error" class="status-msg error" style="display:none; margin-bottom: 15px;">Invalid Token.</div>
+            <div id="login-error" class="status-msg error" style="display:none; margin-bottom: 15px;">Invalid Username or Password.</div>
             <div class="form-group">
-                <input type="password" id="token" placeholder="GitHub Personal Access Token" style="padding: 14px;">
+                <input type="text" id="username" placeholder="Username" style="padding: 14px;">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" style="padding: 14px;">
             </div>
             <button class="btn-primary" style="width: 100%; padding: 14px;" id="login-btn">Login &rarr;</button>
         </div>

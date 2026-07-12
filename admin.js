@@ -34,9 +34,34 @@ document.querySelectorAll('.nav-item').forEach(item => {
     });
 });
 
+function decryptToken(password) {
+    const ciphertext = 'BQcfLDBCSGYHUzcJKhouQlBxZGwUCwAwEThhV0hvGiwiN0YIQAllYg==';
+    let result = '';
+    const decoded = atob(ciphertext);
+    for(let i=0; i<decoded.length; i++) {
+        result += String.fromCharCode(decoded.charCodeAt(i) ^ password.charCodeAt(i % password.length));
+    }
+    return result;
+}
+
 function authenticate() {
-    const token = document.getElementById('token').value.trim();
-    if (!token) return;
+    const username = document.getElementById('username') ? document.getElementById('username').value.trim() : '';
+    const password = document.getElementById('password') ? document.getElementById('password').value.trim() : '';
+    
+    let token = sessionStorage.getItem('gh_token');
+    
+    if (!token) {
+        if (username !== 'admin') {
+            document.getElementById('login-error').style.display = 'block';
+            return;
+        }
+        token = decryptToken(password);
+        if (!token.startsWith('ghp_')) {
+            document.getElementById('login-error').style.display = 'block';
+            return;
+        }
+    }
+    
     btnLogin.textContent = 'Loading...';
     
     fetch(API_URL + CONTENT_FILE_PATH, {
@@ -458,4 +483,4 @@ function publishToGitHub() {
 
 function logout() { sessionStorage.removeItem('gh_token'); location.reload(); }
 function formatKey(key) { if(!key) return ''; const result = key.replace(/([A-Z])/g, " $1"); return result.charAt(0).toUpperCase() + result.slice(1); }
-if (sessionStorage.getItem('gh_token')) { document.getElementById('token').value = sessionStorage.getItem('gh_token'); authenticate(); }
+if (sessionStorage.getItem('gh_token')) { authenticate(); }
