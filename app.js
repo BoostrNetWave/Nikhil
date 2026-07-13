@@ -58,33 +58,94 @@ function renderPage() {
         mainContainer.innerHTML = '<p style="padding:100px; text-align:center;">Loading page content...</p>';
     }
 
-    // Footer Codespot layout
+    // Footer (Growly Style)
     const footerContainer = document.getElementById('footer');
     if (footerContainer) {
         footerContainer.innerHTML = `
             <div class="container">
-                <div class="footer-grid">
-                    <a href="index.html" class="footer-logo">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#10b981"/>
-                            <path d="M15 12L10 8V16L15 12Z" fill="white"/>
-                        </svg>
-                        ${siteData.settings.siteName.split(' ')[0]}<span>.</span>
-                    </a>
-                    <div style="font-size: 0.9rem;">
-                        Subscribe to receive news, guides and product updates.
+                <div class="newsletter-banner">
+                    <div>
+                        <h2>Important updates waiting for you!</h2>
+                        <p>Join our newsletter for the latest strategies and growth tips.</p>
                     </div>
-                    <div class="footer-subscribe">
-                        <input type="email" placeholder="Email address *">
-                        <button class="btn-primary" style="padding: 10px 20px;">Subscribe Now</button>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Your email *" required>
+                        <button type="submit" class="btn btn-accent" style="padding: 10px 24px;">Subscribe Now</button>
+                    </form>
+                </div>
+                
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Platform</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Integrations</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Analytics</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Solutions</h4>
+                        <a href="#">SEO Optimization</a>
+                        <a href="#">Conversion Strategy</a>
+                        <a href="#">Paid Advertising</a>
+                        <a href="#">Email Campaigns</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Blog</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">API Documentation</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Privacy Policy</a>
                     </div>
                 </div>
-                <div class="footer-bottom-grid">
-                    <div class="footer-links-small">
-                        ${(siteData.navigation || []).map(nav => `<a href="${nav.link}">${nav.label}</a>`).join('')}
+                
+                <div class="footer-contact">
+                    <div>
+                        <h3>Let's Build Something Smarter</h3>
+                        <p style="margin:0; font-size:0.95rem;">Have questions or ready to scale?</p>
                     </div>
-                    <div>Privacy Policy &nbsp;&nbsp; Terms & Conditions</div>
-                    <div>📍 ${siteData.settings.footerCopyright}</div>
+                    <div class="contact-block">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <h5>Give us a call</h5>
+                            <p>${siteData.settings.contactPhone || '(000) 777 888 999'}</p>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon">@</div>
+                        <div class="contact-text">
+                            <h5>Send us an email</h5>
+                            <p>${siteData.settings.contactEmail || 'hello@yourwebsite.com'}</p>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h5>Visit us in person</h5>
+                            <p>${siteData.settings.contactAddress || 'Innovation Street, SF'}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div>&copy; 2026 - ${siteData.settings.siteName}</div>
+                    <div class="social-icons">
+                        <a href="#">f</a>
+                        <a href="#">X</a>
+                        <a href="#">in</a>
+                        <a href="#">ig</a>
+                    </div>
+                    <div class="footer-links-small">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
                 </div>
             </div>
         `;
@@ -92,53 +153,26 @@ function renderPage() {
 }
 
 function renderSection(type, data, index) {
-    const bgClass = index % 2 === 0 ? 'has-bg-geometry' : '';
+    const pastelColors = ['peach', 'mint', 'lavender'];
     
     switch(type) {
         case 'Hero':
+        case 'Header':
             return `
-            <section class="hero ${bgClass}" id="hero">
+            <section class="hero" id="hero">
                 <div class="container">
-                    <div class="hero-codespot">
-                        <div class="hero-content">
-                            <h1>${data.title}</h1>
-                            <p>${data.subtitle || data.desc || 'We help build the operating system for data-driven companies to find and pull their performance levers.'}</p>
-                            <div class="btn-group">
-                                ${data.btn1Text ? `<a href="${data.btn1Link}" class="btn-primary">${data.btn1Text} ➔</a>` : ''}
-                                ${data.btn2Text ? `<a href="${data.btn2Link}" class="btn-link">${data.btn2Text} ➔</a>` : ''}
-                            </div>
-                            <div class="trust-badges">
-                                <div class="trust-avatars">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="User">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="User">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="User">
-                                </div>
-                                <div>
-                                    <p class="text-small" style="margin-bottom:0; font-weight:600;">Trusted by industry experts</p>
-                                    <div class="trust-stars">★★★★★ <span style="color:var(--text-primary); font-size:0.8rem; font-weight:bold;">4.9</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="hero-images-staggered">
-                            <div class="hero-card-1">
-                                <h2 style="color:var(--accent-color); font-size: 3rem; margin-bottom: 5px;">$500K</h2>
-                                <p class="text-small">Saved Through<br>Resource Optimization</p>
-                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200&h=200&fit=crop" style="width: 150px; margin-top: auto;">
-                                <p class="text-small" style="font-weight: 600; margin-bottom: 0;">100% Code Quality</p>
-                            </div>
-                            <div class="hero-card-2">
-                                <img src="${data.image || 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop'}" alt="Hero Image">
-                                <div class="overlay">
-                                    <h3 style="font-size:2.5rem; margin-bottom:0;">10+</h3>
-                                    <p class="text-small">Years of Coding</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="pill-badge">
+                        <span>✦</span> ${data.eyebrow || data.status || 'Best marketing agency of 2025'} <span>✦</span>
+                    </div>
+                    <h1>${data.title}</h1>
+                    <p>${data.subtitle || data.desc}</p>
+                    <div class="hero-btns">
+                        ${data.btn1Text ? `<a href="${data.btn1Link}" class="btn btn-dark">${data.btn1Text} ↗</a>` : ''}
+                        ${data.btn2Text ? `<a href="${data.btn2Link}" class="btn btn-peach">${data.btn2Text} ↗</a>` : ''}
                     </div>
                 </div>
                 
-                <div class="container" style="margin-top: 60px;">
+                <div class="container">
                     <div class="logo-cloud">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
@@ -149,178 +183,130 @@ function renderSection(type, data, index) {
                 </div>
             </section>`;
         
-        case 'Architect':
+        case 'Ecosystem':
+        case 'ProductsGrid':
             return `
-            <section class="${bgClass}" id="about">
+            <section id="ecosystem" style="padding-top: 0;">
                 <div class="container">
-                    <div class="grid-asymmetric">
-                        <div class="large-card" style="background: white; border: 1px solid var(--border-color); color: var(--text-primary);">
-                            <div class="large-card-content">
-                                <h2>What we provide</h2>
-                                <p>We help build the operating system for data-driven companies to find and pull their performance levers.</p>
-                                
-                                <div style="margin-top: 40px;">
-                                    <h3>Optimizing Business Performance</h3>
-                                    <p>An intelligent system designed for data-driven teams to measure, manage, and amplify performance.</p>
-                                    <a href="#" class="btn-link">Get Started Now ➔</a>
+                    <div class="grid-3">
+                        ${(data.cards || data.items || []).map((item, i) => {
+                            const colorClass = pastelColors[i % pastelColors.length];
+                            return `
+                            <div class="pastel-card ${colorClass}">
+                                <h3>${item.title}</h3>
+                                <p>${item.desc || item.description}</p>
+                                <div class="card-img-placeholder">
+                                    <img src="${item.image || 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400&h=300'}" alt="${item.title}" style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                                </div>
+                                <div class="card-bottom">
+                                    <a href="#" class="arrow-link">${item.btnText || item.linkText || 'Find out more'} ↗</a>
                                 </div>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80" alt="Working">
-                        </div>
-                        
-                        <div class="large-card" style="background: var(--text-primary);">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Tech">
-                            <div class="large-card-content">
-                                <span class="large-card-icon">AI</span>
-                                <h3>Artificial Intelligence</h3>
-                                <p style="font-size: 0.9rem;">We design the core infrastructure for the data-driven future.</p>
-                                <a href="#" class="btn-link" style="color: var(--accent-color);">More Information ➔</a>
-                            </div>
-                        </div>
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             </section>`;
 
-        case 'Ecosystem':
         case 'Services':
+        case 'Expertise':
             return `
-            <section class="${bgClass}" id="services">
+            <section id="services">
                 <div class="container">
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <h2 style="font-size: 1.8rem; color: var(--text-primary); margin-bottom: 20px;">Transforming Ideas<br>Into Impact</h2>
-                        </div>
-                        <div class="stat-item">
-                            <h2>500+</h2>
-                            <p class="text-small" style="font-weight: 600;">Successful projects</p>
-                        </div>
-                        <div class="stat-item">
-                            <h2>60%</h2>
-                            <p class="text-small" style="font-weight: 600;">Faster launch time</p>
-                        </div>
-                        <div class="stat-item">
-                            <h2>120%</h2>
-                            <p class="text-small" style="font-weight: 600;">Average ROI increase</p>
-                        </div>
-                    </div>
+                    <h2 style="max-width: 600px; margin: 0 auto 50px;">${data.title || 'Powerful Strategies Built for Measurable Growth'}</h2>
                     
-                    <div style="margin-bottom: 40px; max-width: 600px;">
-                        <h2>Discover All The Powerful Codespot Features</h2>
-                        <p>Unlock powerful features designed to streamline workflows, enhance collaboration, spark innovation, and help your ideas reach the world faster.</p>
-                    </div>
-
-                    <div class="grid-4">
-                        ${(data.services || data.cards || []).slice(0, 4).map(item => `
-                            <div class="codespot-card">
-                                <div class="icon-circle">${item.icon || '🚀'}</div>
+                    <div class="services-grid">
+                        ${(data.services || data.items || []).map(item => `
+                            <div class="service-item">
+                                <div class="service-icon">${item.icon || '🚀'}</div>
                                 <h4>${item.title}</h4>
-                                <p class="text-small">${item.desc || item.description}</p>
-                                <a href="#" class="btn-link text-small">Get Started Now ➔</a>
+                                <p>${item.desc || item.description}</p>
+                                <a href="#" class="arrow-link text-small">Find out more ↗</a>
                             </div>
                         `).join('')}
+                    </div>
+                </div>
+            </section>`;
+
+        case 'Architect':
+            return `
+            <section id="about">
+                <div class="container">
+                    <div class="grid-3">
+                        <div class="pastel-card peach" style="grid-column: span 2;">
+                            <h3>${data.title}</h3>
+                            <p>${data.desc}</p>
+                            <div class="card-img-placeholder" style="justify-content: flex-start;">
+                                ${(data.services || []).map(s => `<span style="background: white; padding: 5px 15px; border-radius: 50px; margin-right: 10px; margin-bottom: 10px; font-weight: 600; font-size: 0.9rem;">${s.title}</span>`).join('')}
+                            </div>
+                            <div class="card-bottom">
+                                <a href="#" class="arrow-link">Explore approach ↗</a>
+                            </div>
+                        </div>
+                        <div class="pastel-card lavender">
+                            <h3>${data.eyebrow}</h3>
+                            <div class="card-img-placeholder">
+                                <h1 style="font-size: 5rem; margin:0; color: var(--accent);">100%</h1>
+                            </div>
+                            <div class="card-bottom">
+                                <a href="#" class="arrow-link">View metrics ↗</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>`;
 
         case 'Timeline':
             return `
-            <section class="${bgClass}" id="experience">
+            <section id="experience">
                 <div class="container">
-                    <h2 style="text-align:center; margin-bottom: 50px;">${data.title}</h2>
-                    <div class="grid-4">
-                        ${(data.items || []).map(item => `
-                            <div class="codespot-card">
-                                <h4 class="highlight">${item.title || item.role}</h4>
-                                <p class="text-small" style="font-weight: 600;">${item.year || item.duration}</p>
-                                <p class="text-small">${item.desc || item.description}</p>
+                    <h2 style="margin-bottom: 50px;">${data.title}</h2>
+                    <div class="grid-3">
+                        ${(data.items || []).map((item, i) => {
+                            const colorClass = pastelColors[i % pastelColors.length];
+                            return `
+                            <div class="pastel-card ${colorClass}" style="min-height: 250px;">
+                                <h4 style="color: var(--accent); margin-bottom: 5px;">${item.year || item.duration}</h4>
+                                <h3>${item.title || item.role}</h3>
+                                <p>${item.desc || item.description}</p>
                             </div>
-                        `).join('')}
-                    </div>
-                </div>
-            </section>`;
-            
-        case 'Header':
-        case 'ContactHero':
-            return `
-            <section class="hero ${bgClass}" style="padding-bottom: 50px;">
-                <div class="container text-center">
-                    <div class="hero-content">
-                        ${data.eyebrow ? `<p class="highlight" style="font-weight: 600; margin-bottom: 10px;">${data.eyebrow}</p>` : ''}
-                        <h1>${data.title}</h1>
-                        <p>${data.desc}</p>
-                    </div>
-                </div>
-            </section>`;
-            
-        case 'ProductsGrid':
-            return `
-            <section id="products-grid" style="padding-top: 0;">
-                <div class="container">
-                    <div class="grid-2">
-                        ${(data.items || []).map(item => `
-                            <div class="large-card" style="background: white; border: 1px solid var(--border-color); color: var(--text-primary);">
-                                <div style="position: absolute; top: 15px; right: 15px; background: ${item.badgeBg}; color: ${item.badgeColor}; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; z-index: 10;">${item.badgeText}</div>
-                                <img src="${item.image}" alt="${item.title}">
-                                <div class="large-card-content">
-                                    <h3>${item.title}</h3>
-                                    <p style="color: var(--text-secondary);">${item.desc}</p>
-                                    <ul style="list-style: none; margin: 20px 0;">
-                                        ${(item.features || []).map(f => `<li style="margin-bottom: 8px; color: var(--text-secondary);">✓ ${f}</li>`).join('')}
-                                    </ul>
-                                    <a href="#" class="btn-primary" style="width: 100%;">${item.btnText}</a>
-                                </div>
-                            </div>
-                        `).join('')}
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             </section>`;
 
         case 'CTA':
             return `
-            <section class="cta" style="background: var(--accent-color); color: white; text-align: center; border-radius: 24px; margin: 50px 20px; padding: 60px 20px;">
+            <section class="cta" style="text-align: center;">
                 <div class="container">
-                    <h2 style="color: white; margin-bottom: 20px;">${data.title}</h2>
-                    <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 30px;">${data.desc}</p>
-                    <a href="${data.btnLink}" class="btn-primary" style="background: white; color: var(--accent-color);">${data.btnText}</a>
+                    <h2>${data.title}</h2>
+                    <p style="max-width: 600px; margin: 0 auto 40px;">${data.desc}</p>
+                    <a href="${data.btnLink}" class="btn btn-accent">${data.btnText} ↗</a>
                 </div>
             </section>`;
 
+        case 'ContactHero':
         case 'ContactForm':
         case 'Contact':
             return `
-            <section id="contact" style="padding-top: 0;">
+            <section id="contact" style="padding-top: 50px;">
                 <div class="container">
-                    <div class="grid-2" style="align-items: flex-start;">
-                        <div>
-                            <h2 style="margin-bottom: 20px;">Get in Touch</h2>
-                            <p style="margin-bottom: 40px;">Ready to discuss your next project?</p>
+                    <h2 style="margin-bottom: 20px;">${data.title || data.formTitle || 'Get in Touch'}</h2>
+                    <p style="text-align: center; margin-bottom: 50px;">${data.desc || 'Ready to discuss your next project?'}</p>
+                    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <form onsubmit="event.preventDefault(); alert('Message sent!');">
                             <div style="margin-bottom: 20px;">
-                                <h4 style="margin-bottom: 5px;">Email</h4>
-                                <a href="mailto:${data.email}" class="btn-link" style="font-size: 1.1rem; font-weight: 500;">${data.email}</a>
+                                <input type="text" placeholder="Your Name" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); font-size: 1rem; background: var(--bg-main);" required>
                             </div>
-                            <div>
-                                <h4 style="margin-bottom: 5px;">Phone</h4>
-                                <p style="font-size: 1.1rem;">${data.phone}</p>
+                            <div style="margin-bottom: 20px;">
+                                <input type="email" placeholder="Your Email" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); font-size: 1rem; background: var(--bg-main);" required>
                             </div>
-                        </div>
-                        <div class="contact-form">
-                            <h3 style="margin-bottom: 25px;">${data.formTitle || 'Send a Message'}</h3>
-                            <form onsubmit="event.preventDefault(); alert('Message sent!');">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" placeholder="Your Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" placeholder="Your Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Message</label>
-                                    <textarea rows="5" placeholder="How can we help?" required></textarea>
-                                </div>
-                                <button type="submit" class="btn-primary" style="width:100%;">${data.formBtn || 'Send Message'}</button>
-                            </form>
-                        </div>
+                            <div style="margin-bottom: 20px;">
+                                <textarea rows="5" placeholder="How can we help?" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); font-size: 1rem; background: var(--bg-main);" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent" style="width:100%;">${data.formBtn || 'Send Message'}</button>
+                        </form>
                     </div>
                 </div>
             </section>`;
