@@ -1,288 +1,290 @@
 {
-  "settings": {
-    "siteName": "Nikhil Patra",
-    "ctaText": "Let's Talk",
-    "ctaLink": "contact.html",
-    "footerDesc": "Visionary Innovation at the intersection of AI and Humanity.",
-    "footerCopyright": "© 2024 Nikhil Patra. Visionary Innovation. | Privacy Policy | Terms of Service"
-  },
-  "seo": {
-    "title": "Nikhil Patra | Architect of Digital Futures",
-    "description": "Pioneering the next era of intelligent software.",
-    "ogImage": ""
-  },
-  "navigation": [
-    {
-      "id": "nav1",
-      "label": "Home",
-      "url": "index.html"
-    },
-    {
-      "id": "nav2",
-      "label": "Products",
-      "url": "products.html"
-    },
-    {
-      "id": "nav3",
-      "label": "Contact",
-      "url": "contact.html"
-    }
-  ],
-  "pages": {
-    "home": {
-      "sections": [
-        {
-          "id": "s1",
-          "type": "Hero",
-          "data": {
-            "status": "AVAILABLE FOR CONSULTING",
-            "title": "Nikhil Patra",
-            "subtitle": "Founder & CEO | AI & SaaS Entrepreneur",
-            "desc": "Pioneering the next era of intelligent software. I build scalable AI ecosystems and SaaS platforms that transform how modern businesses operate.",
-            "image": "https://raw.githubusercontent.com/BoostrNetWave/Nikhil/main/uploads/1783865987803-ChatGPT-Image-Jul-10,-2026,-06_54_37-PM.webp",
-            "btn1Text": "Explore Products",
-            "btn1Link": "products.html",
-            "btn2Text": "Contact Me",
-            "btn2Link": "contact.html"
-          }
-        },
-        {
-          "id": "s2",
-          "type": "Architect",
-          "data": {
-            "eyebrow": "THE VISION",
-            "title": "Architect of Digital Futures",
-            "desc": "As the founder of Labix Solutions Pvt. Ltd. and Boostr Netwave Solutions Pvt. Ltd., I'm dedicating my career to bridging the gap between human intuition & machine intelligence and real-world business value.",
-            "services": [
-              {
-                "icon": "🧠",
-                "title": "AI Systems",
-                "desc": "Architecting intelligent neural logic for enterprise."
-              },
-              {
-                "icon": "☁️",
-                "title": "SaaS Architecture",
-                "desc": "Building multi-tenant cloud ecosystems."
-              },
-              {
-                "icon": "💻",
-                "title": "Custom Dev",
-                "desc": "High performance web and mobile solutions."
-              },
-              {
-                "icon": "🚀",
-                "title": "Startup Consulting",
-                "desc": "Scaling ideas from MVP to global markets."
+    "settings":  {
+                     "siteName":  "Nikhil Patra",
+                     "ctaText":  "Let\u0027s Talk",
+                     "ctaLink":  "contact.html",
+                     "footerDesc":  "Visionary Innovation at the intersection of AI and Humanity.",
+                     "footerCopyright":  "© 2024 Nikhil Patra. Visionary Innovation. | Privacy Policy | Terms of Service"
+                 },
+    "seo":  {
+                "title":  "Nikhil Patra | Architect of Digital Futures",
+                "description":  "Pioneering the next era of intelligent software.",
+                "ogImage":  ""
+            },
+    "navigation":  [
+                       {
+                           "id":  "nav1",
+                           "label":  "Home",
+                           "url":  "index.html"
+                       },
+                       {
+                           "id":  "nav2",
+                           "label":  "Products",
+                           "url":  "products.html"
+                       },
+                       {
+                           "id":  "nav3",
+                           "label":  "Contact",
+                           "url":  "contact.html"
+                       }
+                   ],
+    "pages":  {
+                  "home":  {
+                               "sections":  [
+                                                {
+                                                    "id":  "s1",
+                                                    "type":  "Hero",
+                                                    "data":  {
+                                                                 "status":  "AVAILABLE FOR CONSULTING",
+                                                                 "title":  "Nikhil Patra",
+                                                                 "subtitle":  "Founder \u0026 CEO | AI \u0026 SaaS Entrepreneur",
+                                                                 "desc":  "Pioneering the next era of intelligent software. I build scalable AI ecosystems and SaaS platforms that transform how modern businesses operate.",
+                                                                 "image":  "https://raw.githubusercontent.com/BoostrNetWave/Nikhil/main/uploads/1783865987803-ChatGPT-Image-Jul-10,-2026,-06_54_37-PM.webp",
+                                                                 "btn1Text":  "Explore Products",
+                                                                 "btn1Link":  "products.html",
+                                                                 "btn2Text":  "Contact Me",
+                                                                 "btn2Link":  "contact.html"
+                                                             }
+                                                },
+                                                {
+                                                    "id":  "s2",
+                                                    "type":  "Architect",
+                                                    "data":  {
+                                                                 "eyebrow":  "THE VISION",
+                                                                 "title":  "Architect of Digital Futures",
+                                                                 "desc":  "As the founder of Labix Solutions Pvt. Ltd. and Boostr Netwave Solutions Pvt. Ltd., I\u0027m dedicating my career to bridging the gap between human intuition \u0026 machine intelligence and real-world business value.",
+                                                                 "services":  [
+                                                                                  {
+                                                                                      "link":  "https://vidhikai.com/",
+                                                                                      "title":  "Vidhik AI"
+                                                                                  },
+                                                                                  {
+                                                                                      "link":  "https://thetalentsprout.com/",
+                                                                                      "title":  "TalentSprout"
+                                                                                  },
+                                                                                  {
+                                                                                      "link":  "#",
+                                                                                      "title":  "CloudPi"
+                                                                                  },
+                                                                                  {
+                                                                                      "link":  "#",
+                                                                                      "title":  "Makeauthority"
+                                                                                  },
+                                                                                  {
+                                                                                      "link":  "https://www.mornze.com/",
+                                                                                      "title":  "Mornze"
+                                                                                  }
+                                                                              ],
+                                                                 "instagramEmbed":  "",
+                                                                 "linkedinEmbed":  ""
+                                                             }
+                                                },
+                                                {
+                                                    "id":  "s3",
+                                                    "type":  "Timeline",
+                                                    "data":  {
+                                                                 "title":  "Product",
+                                                                 "desc":  "Milestones in the pursuit of technical excellence",
+                                                                 "items":  [
+                                                                               {
+                                                                                   "year":  "2019",
+                                                                                   "title":  "Boostr Netwave Founded",
+                                                                                   "desc":  "Established the company for digital marketing and software services."
+                                                                               },
+                                                                               {
+                                                                                   "year":  "2021",
+                                                                                   "title":  "AI Integration Era",
+                                                                                   "desc":  "Shifted focus to large language models and predictive analytics for enterprise."
+                                                                               },
+                                                                               {
+                                                                                   "year":  "2023",
+                                                                                   "title":  "Labix Solutions",
+                                                                                   "desc":  "Launched specialized SaaS products method focusing on automation."
+                                                                               },
+                                                                               {
+                                                                                   "year":  "2024",
+                                                                                   "title":  "Global Scaling",
+                                                                                   "desc":  "Expanding software reach to 10+ countries with proprietary AI frameworks."
+                                                                               }
+                                                                           ]
+                                                             }
+                                                },
+                                                {
+                                                    "id":  "s4",
+                                                    "type":  "Ecosystem",
+                                                    "data":  {
+                                                                 "title":  "Ecosystem",
+                                                                 "desc":  "The pillars that support our innovations",
+                                                                 "cards":  [
+                                                                               {
+                                                                                   "logoBg":  "#2D31FA",
+                                                                                   "logoLetter":  "L",
+                                                                                   "title":  "Labix Solutions",
+                                                                                   "subtitle":  "Software Studio",
+                                                                                   "desc":  "A next-generation product studio developing intelligent SaaS tools for global enterprises.",
+                                                                                   "tags":  [
+                                                                                                "Generative AI",
+                                                                                                "Micro-SaaS",
+                                                                                                "Enterprise Agile"
+                                                                                            ],
+                                                                                   "linkUrl":  "#",
+                                                                                   "linkText":  "Visit Website →"
+                                                                               },
+                                                                               {
+                                                                                   "logoBg":  "#333333",
+                                                                                   "logoLetter":  "B",
+                                                                                   "title":  "Boostr Netwave",
+                                                                                   "subtitle":  "Digital Agency",
+                                                                                   "desc":  "Comprehensive software development and digital strategy firm.",
+                                                                                   "tags":  [
+                                                                                                "Cloud Infrastructure",
+                                                                                                "Growth Marketing",
+                                                                                                "Mobile App"
+                                                                                            ],
+                                                                                   "linkUrl":  "#",
+                                                                                   "linkText":  "Visit Website →"
+                                                                               }
+                                                                           ]
+                                                             }
+                                                },
+                                                {
+                                                    "id":  "s5",
+                                                    "type":  "Expertise",
+                                                    "data":  {
+                                                                 "title":  "Expertise",
+                                                                 "desc":  "End-to-end technical solutions",
+                                                                 "items":  [
+                                                                               {
+                                                                                   "icon":  "🤖",
+                                                                                   "title":  "AI Integration",
+                                                                                   "desc":  "Custom LLM deployment and predictive analytics."
+                                                                               },
+                                                                               {
+                                                                                   "icon":  "☁️",
+                                                                                   "title":  "SaaS MVP",
+                                                                                   "desc":  "Scalable, responsive web applications."
+                                                                               },
+                                                                               {
+                                                                                   "icon":  "📱",
+                                                                                   "title":  "Mobile Dev",
+                                                                                   "desc":  "Native-feel cross-platform experiences."
+                                                                               },
+                                                                               {
+                                                                                   "icon":  "🌐",
+                                                                                   "title":  "Cloud Solutions",
+                                                                                   "desc":  "Serverless architecture and DevOps."
+                                                                               }
+                                                                           ]
+                                                             }
+                                                },
+                                                {
+                                                    "id":  "s6",
+                                                    "type":  "CTA",
+                                                    "data":  {
+                                                                 "title":  "Ready to Build?",
+                                                                 "desc":  "Let\u0027s discuss how AI can unlock your growth.",
+                                                                 "btnText":  "Start a Conversation →",
+                                                                 "btnLink":  "contact.html"
+                                                             }
+                                                }
+                                            ]
+                           },
+                  "products":  {
+                                   "sections":  [
+                                                    {
+                                                        "id":  "p1",
+                                                        "type":  "Header",
+                                                        "data":  {
+                                                                     "title":  "The Ecosystem",
+                                                                     "desc":  "A collection of visionary tools and platforms designed to bridge the gap between human intuition and machine intelligence."
+                                                                 }
+                                                    },
+                                                    {
+                                                        "id":  "p2",
+                                                        "type":  "ProductsGrid",
+                                                        "data":  {
+                                                                     "items":  [
+                                                                                   {
+                                                                                       "badgeText":  "Live",
+                                                                                       "badgeColor":  "#ffffff",
+                                                                                       "badgeBg":  "rgba(255,255,255,0.9)",
+                                                                                       "image":  "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format\u0026fit=crop\u0026q=80\u0026w=400\u0026h=300",
+                                                                                       "icon":  "☁️",
+                                                                                       "title":  "CloudPi",
+                                                                                       "desc":  "The decentralized computing layer for edge-AI orchestration.",
+                                                                                       "features":  [
+                                                                                                        "Real-time edge processing",
+                                                                                                        "Zero-latency peer sync"
+                                                                                                    ],
+                                                                                       "tags":  [
+                                                                                                    "Rust",
+                                                                                                    "Wasm",
+                                                                                                    "Kubernetes"
+                                                                                                ],
+                                                                                       "btnText":  "LEARN MORE"
+                                                                                   },
+                                                                                   {
+                                                                                       "badgeText":  "MVP",
+                                                                                       "badgeColor":  "#be123c",
+                                                                                       "badgeBg":  "#ffe4e6",
+                                                                                       "image":  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format\u0026fit=crop\u0026q=80\u0026w=400\u0026h=300",
+                                                                                       "icon":  "🌱",
+                                                                                       "title":  "TalentSprout",
+                                                                                       "desc":  "AI-driven psychometric matching for high-stakes hiring.",
+                                                                                       "features":  [
+                                                                                                        "Bias-neutral evaluation",
+                                                                                                        "Cognitive profile mapping"
+                                                                                                    ],
+                                                                                       "tags":  [
+                                                                                                    "Python",
+                                                                                                    "PyTorch",
+                                                                                                    "React"
+                                                                                                ],
+                                                                                       "btnText":  "LEARN MORE"
+                                                                                   }
+                                                                               ]
+                                                                 }
+                                                    }
+                                                ]
+                               },
+                  "contact":  {
+                                  "sections":  [
+                                                   {
+                                                       "id":  "c1",
+                                                       "type":  "ContactHero",
+                                                       "data":  {
+                                                                    "eyebrow":  "Initiate",
+                                                                    "title":  "Collaboration.",
+                                                                    "desc":  "From technical consulting to full-scale AI architecture, I\u0027m here to bridge the gap between human intuition and machine intelligence."
+                                                                }
+                                                   },
+                                                   {
+                                                       "id":  "c2",
+                                                       "type":  "ContactForm",
+                                                       "data":  {
+                                                                    "formTitle":  "Send a Message",
+                                                                    "formBtn":  "Send Brief →",
+                                                                    "email":  "hello@nikhilpatra.ai",
+                                                                    "phone":  "+1 (415) 888-0099",
+                                                                    "whatsappText":  "💬 WhatsApp",
+                                                                    "whatsappLink":  "#",
+                                                                    "meetingText":  "📅 Book Meeting",
+                                                                    "meetingLink":  "#",
+                                                                    "mapLocation":  "Silicon Valley HQ",
+                                                                    "mapImage":  "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format\u0026fit=crop\u0026w=600\u0026h=400"
+                                                                }
+                                                   },
+                                                   {
+                                                       "id":  "c3",
+                                                       "type":  "CTA",
+                                                       "data":  {
+                                                                    "title":  "Let\u0027s build something amazing.",
+                                                                    "desc":  "",
+                                                                    "btnText":  "Initiate Project",
+                                                                    "btnLink":  "#"
+                                                                }
+                                                   }
+                                               ]
+                              }
               }
-            ]
-          }
-        },
-        {
-          "id": "s3",
-          "type": "Timeline",
-          "data": {
-            "title": "Innovation Timeline",
-            "desc": "Milestones in the pursuit of technical excellence",
-            "items": [
-              {
-                "year": "2019",
-                "title": "Boostr Netwave Founded",
-                "desc": "Established the company for digital marketing and software services."
-              },
-              {
-                "year": "2021",
-                "title": "AI Integration Era",
-                "desc": "Shifted focus to large language models and predictive analytics for enterprise."
-              },
-              {
-                "year": "2023",
-                "title": "Labix Solutions",
-                "desc": "Launched specialized SaaS products method focusing on automation."
-              },
-              {
-                "year": "2024",
-                "title": "Global Scaling",
-                "desc": "Expanding software reach to 10+ countries with proprietary AI frameworks."
-              }
-            ]
-          }
-        },
-        {
-          "id": "s4",
-          "type": "Ecosystem",
-          "data": {
-            "title": "Ecosystem",
-            "desc": "The pillars that support our innovations",
-            "cards": [
-              {
-                "logoBg": "#2D31FA",
-                "logoLetter": "L",
-                "title": "Labix Solutions",
-                "subtitle": "Software Studio",
-                "desc": "A next-generation product studio developing intelligent SaaS tools for global enterprises.",
-                "tags": [
-                  "Generative AI",
-                  "Micro-SaaS",
-                  "Enterprise Agile"
-                ],
-                "linkUrl": "#",
-                "linkText": "Visit Website →"
-              },
-              {
-                "logoBg": "#333333",
-                "logoLetter": "B",
-                "title": "Boostr Netwave",
-                "subtitle": "Digital Agency",
-                "desc": "Comprehensive software development and digital strategy firm.",
-                "tags": [
-                  "Cloud Infrastructure",
-                  "Growth Marketing",
-                  "Mobile App"
-                ],
-                "linkUrl": "#",
-                "linkText": "Visit Website →"
-              }
-            ]
-          }
-        },
-        {
-          "id": "s5",
-          "type": "Expertise",
-          "data": {
-            "title": "Expertise",
-            "desc": "End-to-end technical solutions",
-            "items": [
-              {
-                "icon": "🤖",
-                "title": "AI Integration",
-                "desc": "Custom LLM deployment and predictive analytics."
-              },
-              {
-                "icon": "☁️",
-                "title": "SaaS MVP",
-                "desc": "Scalable, responsive web applications."
-              },
-              {
-                "icon": "📱",
-                "title": "Mobile Dev",
-                "desc": "Native-feel cross-platform experiences."
-              },
-              {
-                "icon": "🌐",
-                "title": "Cloud Solutions",
-                "desc": "Serverless architecture and DevOps."
-              }
-            ]
-          }
-        },
-        {
-          "id": "s6",
-          "type": "CTA",
-          "data": {
-            "title": "Ready to Build?",
-            "desc": "Let's discuss how AI can unlock your growth.",
-            "btnText": "Start a Conversation →",
-            "btnLink": "contact.html"
-          }
-        }
-      ]
-    },
-    "products": {
-      "sections": [
-        {
-          "id": "p1",
-          "type": "Header",
-          "data": {
-            "title": "The Ecosystem",
-            "desc": "A collection of visionary tools and platforms designed to bridge the gap between human intuition and machine intelligence."
-          }
-        },
-        {
-          "id": "p2",
-          "type": "ProductsGrid",
-          "data": {
-            "items": [
-              {
-                "badgeText": "Live",
-                "badgeColor": "#ffffff",
-                "badgeBg": "rgba(255,255,255,0.9)",
-                "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400&h=300",
-                "icon": "☁️",
-                "title": "CloudPi",
-                "desc": "The decentralized computing layer for edge-AI orchestration.",
-                "features": [
-                  "Real-time edge processing",
-                  "Zero-latency peer sync"
-                ],
-                "tags": [
-                  "Rust",
-                  "Wasm",
-                  "Kubernetes"
-                ],
-                "btnText": "LEARN MORE"
-              },
-              {
-                "badgeText": "MVP",
-                "badgeColor": "#be123c",
-                "badgeBg": "#ffe4e6",
-                "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=400&h=300",
-                "icon": "🌱",
-                "title": "TalentSprout",
-                "desc": "AI-driven psychometric matching for high-stakes hiring.",
-                "features": [
-                  "Bias-neutral evaluation",
-                  "Cognitive profile mapping"
-                ],
-                "tags": [
-                  "Python",
-                  "PyTorch",
-                  "React"
-                ],
-                "btnText": "LEARN MORE"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "contact": {
-      "sections": [
-        {
-          "id": "c1",
-          "type": "ContactHero",
-          "data": {
-            "eyebrow": "Initiate",
-            "title": "Collaboration.",
-            "desc": "From technical consulting to full-scale AI architecture, I'm here to bridge the gap between human intuition and machine intelligence."
-          }
-        },
-        {
-          "id": "c2",
-          "type": "ContactForm",
-          "data": {
-            "formTitle": "Send a Message",
-            "formBtn": "Send Brief →",
-            "email": "hello@nikhilpatra.ai",
-            "phone": "+1 (415) 888-0099",
-            "whatsappText": "💬 WhatsApp",
-            "whatsappLink": "#",
-            "meetingText": "📅 Book Meeting",
-            "meetingLink": "#",
-            "mapLocation": "Silicon Valley HQ",
-            "mapImage": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&h=400"
-          }
-        },
-        {
-          "id": "c3",
-          "type": "CTA",
-          "data": {
-            "title": "Let's build something amazing.",
-            "desc": "",
-            "btnText": "Initiate Project",
-            "btnLink": "#"
-          }
-        }
-      ]
-    }
-  }
 }

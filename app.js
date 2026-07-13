@@ -257,20 +257,27 @@ function renderSection(type, data, index) {
                         <div class="pastel-card peach" style="grid-column: span 2;">
                             <h3>${data.title}</h3>
                             <p>${data.desc}</p>
-                            <div class="card-img-placeholder" style="justify-content: flex-start;">
-                                ${(data.services || []).map(s => `<span style="background: white; padding: 5px 15px; border-radius: 50px; margin-right: 10px; margin-bottom: 10px; font-weight: 600; font-size: 0.9rem;">${s.title}</span>`).join('')}
-                            </div>
-                            <div class="card-bottom">
-                                <a href="#" class="arrow-link">Explore approach ↗</a>
+                            <div class="card-img-placeholder" style="justify-content: flex-start; flex-wrap: wrap; background: transparent; padding: 0;">
+                                ${(data.services || []).map(s => `
+                                    <a href="${s.link || '#'}" target="_blank" style="background: white; padding: 8px 20px; border-radius: 50px; margin-right: 10px; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; color: var(--text-dark); text-decoration: none; border: 1px solid #eee; transition: 0.2s;" onmouseover="this.style.borderColor='var(--primary-color)'" onmouseout="this.style.borderColor='#eee'">${s.title} ↗</a>
+                                `).join('')}
                             </div>
                         </div>
-                        <div class="pastel-card lavender">
-                            <h3>${data.eyebrow}</h3>
-                            <div class="card-img-placeholder">
-                                <h1 style="font-size: 5rem; margin:0; color: var(--accent);">100%</h1>
+                        <div class="pastel-card lavender" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                            <div style="padding: 20px; background: rgba(255,255,255,0.4); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <h4 style="margin:0; text-align: center;">Social Feed</h4>
                             </div>
-                            <div class="card-bottom">
-                                <a href="#" class="arrow-link">View metrics ↗</a>
+                            <div style="flex: 1; padding: 20px; overflow-y: auto; text-align: center; display: flex; flex-direction: column; gap: 15px;">
+                                <!-- Instagram Video -->
+                                <div style="background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                                    <div style="font-size: 1.2rem; color: #E1306C; margin-bottom: 10px; font-weight: 700;">📸 Instagram</div>
+                                    ${data.instagramEmbed || '<p style="font-size: 0.85rem; color: #666; margin: 0;">Embed your Instagram video via Admin Panel</p>'}
+                                </div>
+                                <!-- LinkedIn Post -->
+                                <div style="background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                                    <div style="font-size: 1.2rem; color: #0077B5; margin-bottom: 10px; font-weight: 700;">💼 LinkedIn</div>
+                                    ${data.linkedinEmbed || '<p style="font-size: 0.85rem; color: #666; margin: 0;">Embed your LinkedIn post via Admin Panel</p>'}
+                                </div>
                             </div>
                         </div>
                     </div>
