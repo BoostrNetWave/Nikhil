@@ -43,7 +43,7 @@ function renderPage() {
     // Navbar
     const navMenu = document.getElementById('nav-menu');
     if (navMenu && siteData.navigation) {
-        navMenu.innerHTML = siteData.navigation.map(nav => `<a href="${nav.link}">${nav.label}</a>`).join('');
+        navMenu.innerHTML = siteData.navigation.map(nav => `<a href="${nav.url}">${nav.label}</a>`).join('');
     }
 
     // Dynamic Sections
