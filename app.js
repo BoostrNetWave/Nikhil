@@ -170,6 +170,10 @@ function renderSection(type, data, index) {
                         ${data.btn1Text ? `<a href="${data.btn1Link}" class="btn btn-dark">${data.btn1Text} ↗</a>` : ''}
                         ${data.btn2Text ? `<a href="${data.btn2Link}" class="btn btn-peach">${data.btn2Text} ↗</a>` : ''}
                     </div>
+                    ${data.image ? `
+                    <div style="margin-top: 60px;">
+                        <img src="${data.image}" alt="Hero Image" style="max-width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: block; margin: 0 auto; max-height: 500px; object-fit: cover;">
+                    </div>` : ''}
                 </div>
                 
                 <div class="container">
@@ -184,7 +188,6 @@ function renderSection(type, data, index) {
             </section>`;
         
         case 'Ecosystem':
-        case 'ProductsGrid':
             return `
             <section id="ecosystem" style="padding-top: 0;">
                 <div class="container">
@@ -200,6 +203,34 @@ function renderSection(type, data, index) {
                                 </div>
                                 <div class="card-bottom">
                                     <a href="#" class="arrow-link">${item.btnText || item.linkText || 'Find out more'} ↗</a>
+                                </div>
+                            </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            </section>`;
+
+        case 'ProductsGrid':
+            return `
+            <section id="products-grid" style="padding-top: 0;">
+                <div class="container">
+                    <div class="grid-3">
+                        ${(data.items || []).map((item, i) => {
+                            const colorClass = pastelColors[i % pastelColors.length];
+                            return `
+                            <div class="pastel-card ${colorClass}" style="padding: 0; overflow: hidden; justify-content: flex-start; min-height: auto;">
+                                <div style="position: relative; height: 220px;">
+                                    <div style="position: absolute; top: 20px; right: 20px; background: white; padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 10;">${item.badgeText || 'Live'}</div>
+                                    <img src="${item.image || 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400&h=300'}" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div style="padding: 30px;">
+                                    <h3 style="margin-bottom: 10px;">${item.title}</h3>
+                                    <p style="margin-bottom: 20px;">${item.desc}</p>
+                                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 25px;">
+                                        ${(item.tags || []).map(t => `<span style="background: white; padding: 6px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 600;">${t}</span>`).join('')}
+                                    </div>
+                                    <a href="#" class="btn btn-dark" style="width: 100%;">${item.btnText || 'Learn More'} ↗</a>
                                 </div>
                             </div>
                             `;
@@ -287,6 +318,17 @@ function renderSection(type, data, index) {
             </section>`;
 
         case 'ContactHero':
+            return `
+            <section class="hero" id="hero">
+                <div class="container">
+                    <div class="pill-badge">
+                        <span>✦</span> ${data.eyebrow || 'Contact Us'} <span>✦</span>
+                    </div>
+                    <h1>${data.title}</h1>
+                    <p style="max-width: 700px; margin: 0 auto;">${data.desc}</p>
+                </div>
+            </section>`;
+
         case 'ContactForm':
         case 'Contact':
             return `
@@ -294,16 +336,35 @@ function renderSection(type, data, index) {
                 <div class="container">
                     <h2 style="margin-bottom: 20px;">${data.title || data.formTitle || 'Get in Touch'}</h2>
                     <p style="text-align: center; margin-bottom: 50px;">${data.desc || 'Ready to discuss your next project?'}</p>
-                    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    
+                    <div class="grid-3" style="margin-bottom: 50px;">
+                        <div class="pastel-card peach" style="min-height: auto; padding: 30px; align-items: center; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">✉️</div>
+                            <h4>Email Us</h4>
+                            <p style="margin: 0;"><a href="mailto:${data.email}" class="arrow-link">${data.email || 'hello@nikhilpatra.ai'}</a></p>
+                        </div>
+                        <div class="pastel-card mint" style="min-height: auto; padding: 30px; align-items: center; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📞</div>
+                            <h4>Call Us</h4>
+                            <p style="margin: 0;"><a href="tel:${data.phone}" class="arrow-link">${data.phone || '+1 234 567 8900'}</a></p>
+                        </div>
+                        <div class="pastel-card lavender" style="min-height: auto; padding: 30px; align-items: center; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📍</div>
+                            <h4>Visit Us</h4>
+                            <p style="margin: 0; color: var(--text-dark);">${data.mapLocation || 'Silicon Valley HQ'}</p>
+                        </div>
+                    </div>
+
+                    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 50px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                         <form onsubmit="event.preventDefault(); alert('Message sent!');">
                             <div style="margin-bottom: 20px;">
-                                <input type="text" placeholder="Your Name" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); font-size: 1rem; background: var(--bg-main);" required>
+                                <input type="text" placeholder="Your Name" style="width: 100%; padding: 15px 20px; border-radius: 50px; border: 1px solid transparent; background: var(--bg-main); font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.border='1px solid var(--accent)'" onblur="this.style.border='1px solid transparent'" required>
                             </div>
                             <div style="margin-bottom: 20px;">
-                                <input type="email" placeholder="Your Email" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); font-size: 1rem; background: var(--bg-main);" required>
+                                <input type="email" placeholder="Your Email" style="width: 100%; padding: 15px 20px; border-radius: 50px; border: 1px solid transparent; background: var(--bg-main); font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.border='1px solid var(--accent)'" onblur="this.style.border='1px solid transparent'" required>
                             </div>
-                            <div style="margin-bottom: 20px;">
-                                <textarea rows="5" placeholder="How can we help?" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); font-size: 1rem; background: var(--bg-main);" required></textarea>
+                            <div style="margin-bottom: 25px;">
+                                <textarea rows="5" placeholder="How can we help?" style="width: 100%; padding: 20px; border-radius: 24px; border: 1px solid transparent; background: var(--bg-main); font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.border='1px solid var(--accent)'" onblur="this.style.border='1px solid transparent'" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-accent" style="width:100%;">${data.formBtn || 'Send Message'}</button>
                         </form>
