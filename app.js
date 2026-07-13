@@ -166,23 +166,13 @@ function renderSection(type, data, index) {
                     </div>
                     <h1>${data.title}</h1>
                     <p>${data.subtitle || data.desc}</p>
+                    ${data.image ? `
+                    <div style="margin: 40px 0;">
+                        <img src="${data.image}" alt="Hero Image" style="max-width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: block; margin: 0 auto; max-height: 500px; object-fit: cover;">
+                    </div>` : ''}
                     <div class="hero-btns">
                         ${data.btn1Text ? `<a href="${data.btn1Link}" class="btn btn-dark">${data.btn1Text} ↗</a>` : ''}
                         ${data.btn2Text ? `<a href="${data.btn2Link}" class="btn btn-peach">${data.btn2Text} ↗</a>` : ''}
-                    </div>
-                    ${data.image ? `
-                    <div style="margin-top: 60px;">
-                        <img src="${data.image}" alt="Hero Image" style="max-width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: block; margin: 0 auto; max-height: 500px; object-fit: cover;">
-                    </div>` : ''}
-                </div>
-                
-                <div class="container">
-                    <div class="logo-cloud">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Y_Combinator_logo.svg" alt="YC">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
                     </div>
                 </div>
             </section>`;
